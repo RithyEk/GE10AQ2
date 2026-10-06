@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GE 11A - Quiz 2: Unit 8 Lesson 2: Comment Clause with Which</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.5;
+            margin: 0;
+            padding: 12px;
+            color: #333;
+            background-image: url('image.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            width: 100%;
+            max-width: 750px;
+            background: rgba(255, 255, 255, 0.97);
+            padding: 20px 16px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+            position: relative;
+            margin: auto;
+        }
+        @media (min-width: 768px) {
+            body { padding: 30px 20px; }
+            .container { padding: 40px; }
+        }
+        h1 {
+            color: #b45309; /* Dark Orange */
+            font-size: 20px;
+            margin-bottom: 12px;
+            text-align: center;
+            line-height: 1.3;
+        }
+        @media (min-width: 768px) {
+            h1 { font-size: 25px; }
+        }
+        h2, h3 {
+            color: #b45309;
+        }
+        .meta-box {
+            border: 2px dashed #fcd34d;
+            background: #fffbeb;
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 18px;
+            font-size: 12px;
+            color: #92400e;
+            font-weight: 600;
+            text-align: center;
+        }
+        @media (min-width: 768px) {
+            .meta-box { font-size: 14px; padding: 12px; }
+        }
+        .timer-box {
+            background: #fef3c7;
+            border: 1px solid #f59e0b;
+            color: #b45309;
+            padding: 10px;
+            border-radius: 10px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 18px;
+            font-size: 15px;
+        }
+        .instructions-card {
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 20px;
+            text-align: left;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.04);
+        }
+        @media (min-width: 768px) {
+            .instructions-card { padding: 22px 25px; }
+        }
+        .instructions-card h3 {
+            color: #b45309;
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 15px;
+            text-align: center;
+        }
+        @media (min-width: 768px) {
+            .instructions-card h3 { font-size: 18px; }
+        }
+        .instructions-card ul {
+            margin: 0;
+            padding-left: 18px;
+        }
+        .instructions-card li {
+            margin-bottom: 6px;
+            color: #555;
+            font-size: 13px;
+        }
+        @media (min-width: 768px) {
+            .instructions-card li { font-size: 15px; }
+        }
+        .input-section {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        .input-section label {
+            display: block;
+            font-weight: bold;
+            color: #b45309;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+        .input-section input[type="text"] {
+            width: 100%;
+            padding: 12px 15px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            transition: all 0.2s;
+        }
+        .input-section input[type="text"]:focus {
+            outline: none;
+            border-color: #d97706;
+            box-shadow: 0 0 8px rgba(217, 119, 6, 0.3);
+        }
+        .start-btn {
+            background: linear-gradient(135deg, #d97706, #b45309);
+            color: white;
+            border: none;
+            padding: 14px 25px;
+            font-size: 17px;
+            font-weight: bold;
+            border-radius: 10px;
+            cursor: pointer;
+            width: 100%;
+            transition: opacity 0.2s, transform 0.1s;
+            box-shadow: 0 4px 15px rgba(217, 119, 6, 0.35);
+        }
+        .start-btn:hover {
+            opacity: 0.95;
+            transform: translateY(-1px);
+        }
+        .exercise {
+            margin-bottom: 25px;
+        }
+        .question-card {
+            background: #ffffff;
+            border: 1px solid #fde68a;
+            border-radius: 12px;
+            padding: 14px;
+            margin-bottom: 12px;
+            box-shadow: 0 2px 8px rgba(180, 83, 9, 0.04);
+            transition: all 0.2s ease;
+        }
+        @media (min-width: 768px) {
+            .question-card {
+                padding: 18px 20px;
+                margin-bottom: 16px;
+            }
+        }
+        .question-card:hover {
+            border-color: #f59e0b;
+            box-shadow: 0 4px 12px rgba(180, 83, 9, 0.08);
+        }
+        .question-text {
+            font-size: 13px;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-weight: 600;
+            word-break: break-word;
+        }
+        @media (min-width: 768px) {
+            .question-text { font-size: 15px; margin-bottom: 12px; }
+        }
+        .question-input {
+            width: 100%;
+            padding: 10px 14px;
+            font-size: 15px; 
+            border: 1px solid #fcd34d;
+            border-radius: 10px;
+            background-color: #fffbeb;
+            transition: all 0.2s;
+        }
+        .question-input:focus {
+            outline: none;
+            border-color: #d97706;
+            background-color: #ffffff;
+            box-shadow: 0 0 8px rgba(217, 119, 6, 0.15);
+        }
+        .sample-guide {
+            background: #fffbeb;
+            border: 1px solid #fcd34d;
+            border-left: 5px solid #d97706;
+            padding: 12px 14px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            font-size: 12px;
+            color: #92400e;
+        }
+        @media (min-width: 768px) {
+            .sample-guide { padding: 15px 20px; font-size: 14px; }
+        }
+        .sample-guide strong { color: #b45309; }
+        .submit-container {
+            text-align: center;
+            margin-top: 25px;
+        }
+        .submit-btn {
+            background-color: #b45309;
+            color: white;
+            padding: 14px 25px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.2s;
+            box-shadow: 0 4px 12px rgba(180, 83, 9, 0.3);
+        }
+        @media (min-width: 768px) {
+            .submit-btn { width: auto; padding: 12px 35px; }
+        }
+        .submit-btn:hover { background-color: #92400e; }
+        hr { border: 0; border-top: 1px solid #e0e0e0; margin: 22px 0; }
+        .hidden { display: none !important; }
+        .modal-overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.55);
+            display: flex; justify-content: center; align-items: center;
+            z-index: 1000; padding: 12px;
+        }
+        .modal-card {
+            background: #fff; width: 100%; max-width: 480px;
+            padding: 22px 16px; border-radius: 18px; text-align: center;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+            max-height: 85vh; overflow-y: auto;
+        }
+        @media (min-width: 768px) { .modal-card { padding: 30px; } }
+        .modal-card h2 { color: #b45309; margin-top: 0; font-size: 20px; }
+        .modal-card p { margin: 8px 0; color: #555; font-size: 13px; }
+        .score-display { font-size: 22px; font-weight: bold; color: #b45309; margin: 12px 0; }
+        .feedback-msg {
+            background: #fffbeb; border: 1px solid #fcd34d;
+            padding: 10px; border-radius: 10px; font-size: 12px;
+            margin: 12px 0; color: #92400e; text-align: left;
+        }
+        .screenshot-warning { font-weight: bold; color: #b91c1c; font-size: 11px; margin: 12px 0; text-transform: uppercase; }
+        .modal-btn {
+            background: #d97706; color: white; border: none;
+            padding: 12px 20px; font-size: 15px; font-weight: bold;
+            border-radius: 10px; cursor: pointer; width: 100%; margin-top: 10px;
+            box-shadow: 0 4px 12px rgba(217, 119, 6, 0.3);
+        }
+        .modal-btn:hover { background: #b45309; }
+        .review-item {
+            background: #f8f9fa; border: 1px solid #dee2e6;
+            padding: 12px; border-radius: 10px; margin-bottom: 12px;
+            text-align: left; font-size: 13px;
+        }
+        .review-item.correct { border-left: 5px solid #10b981; }
+        .review-item.incorrect { border-left: 5px solid #ef4444; }
+        .user-ans { font-weight: bold; word-break: break-all; }
+        .correct-ans { color: #10b981; font-weight: bold; word-break: break-all; }
+        .explanation { font-size: 11px; color: #6c757d; margin-top: 4px; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- START PAGE -->
+        <div id="startPage">
+            <h1>📘 Paññāsāstra International School (PSIS) 📘</h1>
+            
+            <div class="meta-box">
+                LEVEL: GE11A &nbsp;|&nbsp; SUBJECT: CORE-ENGLISH &nbsp;|&nbsp; INSTRUCTOR: PKRE
+            </div>
+
+            <div class="instructions-card">
+                <h3>✨ QUIZ 2: Unit 8 Lesson 2: Comment Clause with Which ✨</h3>
+                <ul>
+                    <li><strong>Task:</strong> Combine each pair of sentences into one sentence by typing <strong>only the *which* clause</strong> (e.g., <Code>, which was fantastic</Code>).</li>
+                    <li><strong>Punctuation & Caps:</strong> Full stops and capitalization are automatically ignored.</li>
+                    <li><strong>Time Limit:</strong> Strictly <strong>20 minutes</strong>. The quiz will auto-submit when time runs out.</li>
+                </ul>
+            </div>
+
+            <form id="startForm" onsubmit="startQuiz(event)">
+                <div class="input-section">
+                    <label for="fullName">Enter your Full Name:</label>
+                    <input type="text" id="fullName" name="fullName" placeholder="e.g., John Doe" required>
+                </div>
+                <button type="submit" class="start-btn">Start Quiz 🚀</button>
+            </form>
+        </div>
+
+        <!-- QUIZ CONTENT SECTION -->
+        <div id="quizContent" class="hidden">
+            <div class="meta-box" style="margin-bottom: 10px;">
+                Student: <span id="displayName" style="font-weight: bold;"></span> | GE 11A - Quiz 2
+            </div>
+
+            <div class="timer-box" id="timerDisplay">
+                ⏱️ Time Remaining: 20:00
+            </div>
+
+            <form id="quizForm" onsubmit="handleFinalSubmission(event)">
+                
+                <div class="exercise">
+                    <h3>Comment Clause with Which (20 Items)</h3>
+                    <div class="sample-guide">
+                        💡 <strong>Example:</strong><br>
+                        She passed the exam. It was fantastic.<br>
+                        → She passed the exam <strong>, which was fantastic</strong><br>
+                        <em>(Type the clause starting with the comma and "which".)</em>
+                    </div>
+
+                    <!-- Q1 -->
+                    <div class="question-card">
+                        <div class="question-text">1. He forgot his wallet. This meant he couldn't pay for lunch.</div>
+                        <input type="text" class="question-input" name="q_1" placeholder=", which meant he couldn't pay for lunch">
+                    </div>
+                    <!-- Q2 -->
+                    <div class="question-card">
+                        <div class="question-text">2. She won the scholarship. This made her parents very proud.</div>
+                        <input type="text" class="question-input" name="q_2" placeholder="Type which clause here...">
+                    </div>
+                    <!-- Q3 -->
+                    <div class="question-card">
+                        <div class="question-text">3. We arrived late. This caused us to miss the beginning of the movie.</div>
+                        <input type="text" class="question-input" name="q_3" placeholder="Type which clause here...">
+                    </div>
+                    <!-- Q4 -->
+                    <div class="question-card">
+                        <div class="question-text">4. The restaurant was closed. This was very disappointing.</div>
+                        <input type="text" class="question-input" name="q_4" placeholder="Type which clause here...">
+                    </div>
+                    <!-- Q5 -->
+                    <div class="question-card">
+                        <div class="question-text">5. I bought a new laptop. This was a great decision.</div>
+                        <input type="text" class="question-input" name="q_5" placeholder="Type which clause here...">
+                    </div>
+                    <!-- Q6 -->
+                    <div class="question-card">
+                        <div class="question-text">6. He didn't study for the test. This surprised his teacher.</div>
+                        <input type="text" class="question-input" name="q_6" placeholder="Type which clause here...">
+                    </div>
+                    <!-- Q7 -->
+                    <div class="question-card">
+                        <div class="question-text">7. They cancelled the meeting. This meant we had to come back the next day.</div>
+                        <input type="text" class="question-input" name="q_7" placeholder="Type which clause here...">
+                    </div>
+                    <!-- Q8 -->
+                    <div class="question-card">
+                        <div class="question-text">8. She got a new job. This made everyone very happy.</div>
+                        <input type="text" class="question-input" name="q_8" placeholder="Type which clause here...">
+                    </div>
+                    <!-- Q9 -->
+                    <div class="question-card">
+                        <div class="question-text">9. It rained heavily last night. This caused serious flooding.</div>
+                        <input type="text" class="question-input" name="q_9" placeholder="Type which clause here...">
+                    </div>
+                    <!-- Q10 -->
+                    <div class="question-card">
+                        <div class="question-text">10. My brother passed his driving test. This was fantastic news.</div>
+                        <input type="text" class="question-input" name="q_10" placeholder="Type which clause here...">
+                    </div>
+                    <!-- Q11 -->
+                    <div class="question-card">
+                        <div class="question-text">11. She quit her job suddenly. This surprised everyone.</div>
+                        <input type="text" class="question-input" name="q_11" placeholder="Type which clause here...">
+                    </div>
+                    <!-- Q12 -->
+                    <div class="question-card">
+                        <div class="question-text">12. We finished the project early. This impressed our manager.</div>
+                        <input type="text" class="question-input" name="q_12" placeholder="Type which clause here...">
+                    </div>
+                    <!-- Q13 -->
+                    <div class="question-card">
+                        <div class="question-text">13. He lost his phone. This meant he couldn't contact anyone.</div>
+                        <input type="text" class="question-input" name="q_13" placeholder="Type which clause here...">
+                    </div>
+                    <!-- Q14 -->
+                    <div class="question-card">
+                        <div class="question-text">14. They moved to a new house. This was a big change for the family.</div>
+                        <input type="text" class="question-input" name="q_14" placeholder="Type which clause here...">
+                    </div>
+                    <!-- Q15 -->
+                    <div class="question-card">
+                        <div class="question-text">15. I forgot to set my alarm. This caused me to arrive late for class.</div>
+                        <input type="text" class="question-input" name="q_15" placeholder="Type which clause here...">
+                    </div>
+                    <!-- Q16 -->
+                    <div class="question-card">
+                        <div class="question-text">16. She rejected the offer. This was unexpected.</div>
+                        <input type="text" class="question-input" name="q_16" placeholder="Type which clause here...">
+                    </div>
+                    <!-- Q17 -->
+                    <div class="question-card">
+                        <div class="question-text">17. The school cancelled the trip. This disappointed all the students.</div>
+                        <input type="text" class="question-input" name="q_17" placeholder="Type which clause here...">
+                    </div>
+                    <!-- Q18 -->
+                    <div class="question-card">
+                        <div class="question-text">18. He bought an expensive computer. This was strange because he already had a good one.</div>
+                        <input type="text" class="question-input" name="q_18" placeholder="Type which clause here...">
+                    </div>
+                    <!-- Q19 -->
+                    <div class="question-card">
+                        <div class="question-text">19. We solved the problem. This made everyone feel relieved.</div>
+                        <input type="text" class="question-input" name="q_19" placeholder="Type which clause here...">
+                    </div>
+                    <!-- Q20 -->
+                    <div class="question-card">
+                        <div class="question-text">20. She received the highest score in the class. This made her teacher very proud.</div>
+                        <input type="text" class="question-input" name="q_20" placeholder="Type which clause here...">
+                    </div>
+                </div>
+
+                <div class="submit-container">
+                    <button type="submit" class="submit-btn">Final Quiz Submission 🚀</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- REVIEW / RESULTS MODAL -->
+        <div id="resultModal" class="modal-overlay hidden">
+            <div class="modal-card" id="modalCardContent">
+                <h2 id="modalTitle">Quiz Results</h2>
+                <p>Congratulations, <span id="modalName"></span>.</p>
+                <div class="score-display">You scored <span id="scoreVal">0</span> / 20</div>
+                
+                <div class="feedback-msg" id="feedbackText">
+                    Great effort! Check the review answers below for full explanations.
+                </div>
+
+                <div class="screenshot-warning">
+                    DO NOT FORGET TO SCREENSHOT THIS AND SEND TO YOUR TEACHER.
+                </div>
+                <p style="font-size: 12px; color: #888;">Review your answers carefully!</p>
+
+                <button class="modal-btn" onclick="openReviewMode()">Review Answers 👀</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let studentName = "";
+        let userAnswersData = {};
+        let timerInterval;
+        let timeLeft = 1200; // 20 minutes countdown (20 * 60 seconds)
+
+        const answerKey = {
+            q_1: [", which meant he couldn't pay for lunch", "which meant he couldn't pay for lunch"],
+            q_2: [", which made her parents very proud", "which made her parents very proud"],
+            q_3: [", which caused us to miss the beginning of the movie", "which caused us to miss the beginning of the movie"],
+            q_4: [", which was very disappointing", "which was very disappointing"],
+            q_5: [", which was a great decision", "which was a great decision"],
+            q_6: [", which surprised his teacher", "which surprised his teacher"],
+            q_7: [", which meant we had to come back the next day", "which meant we had to come back the next day"],
+            q_8: [", which made everyone very happy", "which made everyone very happy"],
+            q_9: [", which caused serious flooding", "which caused serious flooding"],
+            q_10: [", which was fantastic news", "which was fantastic news"],
+            q_11: [", which surprised everyone", "which surprised everyone"],
+            q_12: [", which impressed our manager", "which impressed our manager"],
+            q_13: [", which meant he couldn't contact anyone", "which meant he couldn't contact anyone"],
+            q_14: [", which was a big change for the family", "which was a big change for the family"],
+            q_15: [", which caused me to arrive late for class", "which caused me to arrive late for class"],
+            q_16: [", which was unexpected", "which was unexpected"],
+            q_17: [", which disappointed all the students", "which disappointed all the students"],
+            q_18: [", which was strange because he already had a good one", "which was strange because he already had a good one"],
+            q_19: [", which made everyone feel relieved", "which made everyone feel relieved"],
+            q_20: [", which made her teacher very proud", "which made her teacher very proud"]
+        };
+
+        const explanations = {
+            q_1: "Replace 'This' with ', which' to connect the clause representing the consequence.",
+            q_2: "Replace 'This' with ', which' to introduce the comment clause.",
+            q_3: "Replace 'This' with ', which' to show the resulting effect.",
+            q_4: "Replace 'This' with ', which' to describe the preceding situation.",
+            q_5: "Replace 'This' with ', which' to comment on the decision.",
+            q_6: "Replace 'This' with ', which' to comment on the unexpected behavior.",
+            q_7: "Replace 'This' with ', which' to state the resulting necessity.",
+            q_8: "Replace 'This' with ', which' to introduce the reaction.",
+            q_9: "Replace 'This' with ', which' to state the weather's consequence.",
+            q_10: "Replace 'This' with ', which' to evaluate the milestone.",
+            q_11: "Replace 'This' with ', which' to express the surprise factor.",
+            q_12: "Replace 'This' with ', which' to highlight the manager's reaction.",
+            q_13: "Replace 'This' with ', which' to show the consequence of losing the phone.",
+            q_14: "Replace 'This' with ', which' to comment on the relocation.",
+            q_15: "Replace 'This' with ', which' to link the cause and effect.",
+            q_16: "Replace 'This' with ', which' to describe the rejection.",
+            q_17: "Replace 'This' with ', which' to express student disappointment.",
+            q_18: "Replace 'This' with ', which' to comment on the unusual purchase.",
+            q_19: "Replace 'This' with ', which' to express the collective relief.",
+            q_20: "Replace 'This' with ', which' to comment on the high score."
+        };
+
+        function startQuiz(event) {
+            event.preventDefault();
+            const nameInput = document.getElementById('fullName').value.trim();
+            if (nameInput) {
+                studentName = nameInput;
+                document.getElementById('displayName').textContent = studentName;
+                document.getElementById('startPage').classList.add('hidden');
+                document.getElementById('quizContent').classList.remove('hidden');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                startTimer();
+            }
+        }
+
+        function startTimer() {
+            timerInterval = setInterval(() => {
+                if (timeLeft <= 0) {
+                    clearInterval(timerInterval);
+                    triggerAutoSubmission();
+                } else {
+                    let minutes = Math.floor(timeLeft / 60);
+                    let seconds = timeLeft % 60;
+                    document.getElementById('timerDisplay').textContent = 
+                        `⏱️ Time Remaining: ${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+                    timeLeft--;
+                }
+            }, 1000);
+        }
+
+        function triggerAutoSubmission() {
+            const form = document.getElementById('quizForm');
+            const formData = new FormData(form);
+            processSubmission(formData);
+        }
+
+        function handleFinalSubmission(event) {
+            event.preventDefault();
+            clearInterval(timerInterval);
+            const formData = new FormData(event.target);
+            processSubmission(formData);
+        }
+
+        function cleanString(str) {
+            return str.toLowerCase()
+                      .replace(/[.?!]+/g, '')
+                      .replace(/\s+/g, ' ')
+                      .trim();
+        }
+
+        function processSubmission(formData) {
+            let score = 0;
+            userAnswersData = {};
+
+            for (let [key, value] of formData.entries()) {
+                userAnswersData[key] = value.trim();
+            }
+
+            for (let key in answerKey) {
+                let userVal = userAnswersData[key] || "";
+                let cleanedUser = cleanString(userVal);
+
+                let isMatch = answerKey[key].some(ans => cleanedUser === cleanString(ans));
+                if (isMatch) {
+                    score++;
+                }
+            }
+
+            document.getElementById('modalName').textContent = studentName;
+            document.getElementById('scoreVal').textContent = score;
+
+            let feedbackString = "";
+            if (score <= 10) {
+                feedbackString = "Needs improvement. Review how to form comment clauses with 'which' carefully!";
+            } else if (score >= 11 && score <= 15) {
+                feedbackString = "Good effort! You understand the structure, but watch out for minor phrasing details.";
+            } else if (score >= 16 && score <= 19) {
+                feedbackString = "Great job! Strong command of non-defining comment clauses!";
+            } else if (score === 20) {
+                feedbackString = "Outstanding! Perfect score! You have completely mastered the comment clause with 'which'!";
+            }
+
+            document.getElementById('feedbackText').textContent = feedbackString;
+            document.getElementById('resultModal').classList.remove('hidden');
+        }
+
+        function openReviewMode() {
+            const card = document.getElementById('modalCardContent');
+            card.style.textAlign = "left";
+            
+            let htmlContent = `<h2>Review Answers</h2><p>Student: <strong>${studentName}</strong></p><hr>`;
+            
+            let qCounter = 1;
+            for (let key in answerKey) {
+                let userAns = userAnswersData[key] || "(No answer)";
+                let cleanedUser = cleanString(userAns);
+                let isCorrect = answerKey[key].some(ans => cleanedUser === cleanString(ans));
+                
+                htmlContent += `<div class="review-item ${isCorrect ? 'correct' : 'incorrect'}">`;
+                htmlContent += `<div><strong>Q${qCounter}:</strong> Your answer: <span class="user-ans">${userAns}</span> ${isCorrect ? '✅' : '❌'}</div>`;
+                
+                if (!isCorrect) {
+                    htmlContent += `<div style="margin-top: 4px;">Correct answer: <span class="correct-ans">${answerKey[key][0]}</span></div>`;
+                }
+                htmlContent += `<div class="explanation">💡 <strong>Explanation:</strong> ${explanations[key]}</div>`;
+                htmlContent += `</div>`;
+                qCounter++;
+            }
+
+            htmlContent += `<button class="modal-btn" onclick="location.reload()">Restart Quiz 🔄</button>`;
+            card.innerHTML = htmlContent;
+        }
+    </script>
+</body>
+</html>
